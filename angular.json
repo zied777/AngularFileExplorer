@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-file-explorer": {
+      "projectType": "library",
+      "root": "projects/angular-file-explorer",
+      "sourceRoot": "projects/angular-file-explorer/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-file-explorer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-file-explorer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-file-explorer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-file-explorer/src/test.ts",
+            "tsConfig": "projects/angular-file-explorer/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-file-explorer/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-file-explorer"
 }

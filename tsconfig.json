@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "angular-file-explorer": [
+        "dist/angular-file-explorer/angular-file-explorer",
+        "dist/angular-file-explorer"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
