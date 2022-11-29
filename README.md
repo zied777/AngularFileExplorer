@@ -8,7 +8,6 @@ npm i angular-file-explorer
 
 ## Usage
 
-
   <afs-explorer></afs-explorer>
 
 ## Demo
